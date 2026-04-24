@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import Login from './Login.tsx'
-import Signup from './Signup.tsx'
+// import Signup from './Signup.tsx'
 import './index.css'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { initializeApp } from "firebase/app";

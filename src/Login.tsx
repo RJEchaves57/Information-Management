@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
-
+// will add if using google GoogleAuthProvider, signInWithPopup, 
 const Login = () => {
     const auth = getAuth();
     const navigate = useNavigate();
@@ -11,19 +11,19 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    const signInWithGoogle = async () => {
-        setAuthing(true);
+    // const signInWithGoogle = async () => {
+    //     setAuthing(true);
         
-        signInWithPopup(auth, new GoogleAuthProvider())
-            .then(response => {
-                console.log(response.user.uid);
-                navigate('/');
-            })
-            .catch(error => {
-                console.log(error);
-                setAuthing(false);
-            });
-    }
+    //     signInWithPopup(auth, new GoogleAuthProvider())
+    //         .then(response => {
+    //             console.log(response.user.uid);
+    //             navigate('/');
+    //         })
+    //         .catch(error => {
+    //             console.log(error);
+    //             setAuthing(false);
+    //         });
+    // }
 
     const signInWithEmail = async () => {
         setAuthing(true);
